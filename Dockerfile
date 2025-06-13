@@ -7,7 +7,7 @@ FROM python:3.13.3-slim
 WORKDIR /app
 
 # 3. 安裝依賴
-# 首先只複製 requirements.txt 來利用 Docker 的層快取機制
+# 首先只複  製 requirements.txt 來利用 Docker 的層快取機制
 # 只有當 requirements.txt 改變時，才會重新執行 pip install
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
