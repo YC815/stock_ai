@@ -134,7 +134,8 @@ def fetch_historical_data(engine, ticker_list):
             logging.error("[%s] Failed to process ticker: %s", ticker, e)
 
 
-if __name__ == "__main__":
+def run_data_collection():
+    """主執行函式，用於抓取和存儲股票數據。"""
     setup_logging()
     db_engine = get_db_engine()
 
@@ -159,3 +160,7 @@ if __name__ == "__main__":
             logging.warning("沒有找到任何股票代碼，腳本終止。")
     else:
         logging.error("無法建立資料庫引擎，腳本終止。")
+
+
+if __name__ == "__main__":
+    run_data_collection()

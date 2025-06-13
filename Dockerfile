@@ -18,5 +18,6 @@ COPY . .
 
 # 5. 設定預設執行指令
 # 當容器啟動時，會執行這個指令
-# 這裡我們執行 get_data.py 腳本
-CMD ["python", "get_data/get_data.py"] 
+# 這裡我們使用 Gunicorn 來啟動 Flask 應用程式
+# Zeabur 會自動注入 PORT 環境變數
+CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "app:app"] 

@@ -1,3 +1,5 @@
+Flask
+gunicorn
 appdirs==1.4.4
 beautifulsoup4==4.13.4
 bs4==0.0.2
