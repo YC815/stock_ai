@@ -1,6 +1,6 @@
 # 1. 使用官方 Python 映像作為基礎
 # 我們使用 slim 版本，因為它的體積更小
-FROM python:3.11-slim
+FROM python:3.13.3-slim
 
 # 2. 設定工作目錄
 # 容器內的所有後續操作都會在這個目錄下進行
